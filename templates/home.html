@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Flask Web App</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+
+<h1>Titanic Classification</h1>
+<p> Please fill in the values below to classify can you survive in Titanic</p>
+
+<form action="/result" method="POST">
+
+    <label>Pclass</label>
+    <input type="text" name="pclass">
+    <br>
+    <label>Age</label>
+    <input type="text" name="age">
+    <br>
+    <label>SibSp</label>
+    <input type="text" name="sibsp">
+    <br>
+    <label>Parch</label>
+    <input type="text" name="parch">
+    <br>
+    <label>Fare</label>
+    <input type="text" name="fare">btw:[0-100]
+    <br>
+    <label>sex</label>
+    <select id="z" name="z">
+        <option value="0">Male</option>
+        <option value="1">Female</option>
+      </select>
+    <br>
+    <label>embarked</label>
+    <select id="embarked" name="embarked">
+        <option value="Q">Q</option>
+        <option value="S">S</option>
+      </select>
+    <br>
+    <input type="submit" value="Submit">
+
+
+</form>
+
+</body>
+</html>
